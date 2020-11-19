@@ -6,12 +6,12 @@
 - Java 애플리케이션을 실행하기 위한 런타임 환경을 제공하는 엔진
 - Java 바이트코드를 기계어로 변환
 - Java Run Environment(JRE)의 한 부분
-- Write Once Run Everywhere
 
 ## 컴파일 하는 방법
 - Java 프로그램 컴파일은 보통 `.java` 파일을 `.class` 파일로 변환하는 것을 말한다.
-- 컴파일로는 javac를 사용할 수 있다.
+- Java 컴파일로는 javac, Jikes, ECJ, JIT 등이 있다. (예시는 javac 사용)
 ``` java
+// HelloWorld.java
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -23,15 +23,29 @@ $ javac HelloWorld.java
 $ ls
 HelloWorld.class HelloWorld.java
 ```
+
 ## 실행하는 방법
 ``` shell
 $ java HelloWorld
 Hello World!
 ```
+
 ## 바이트코드란 무엇인가
+- Java 바이트코드란 JVM의 instruction set이다.
+    - [Java bytecode instruction 리스트](https://en.wikipedia.org/wiki/Java_bytecode_instruction_listings)
+- platform-neutral 하기 때문에 `Write Once Run Everywhere`를 가능하게 한다. 
+
 ## JIT 컴파일러란 무엇이며 어떻게 동작하는지
+- Just-In-Time 컴파일
+- 동적 번역(dynamic translation)이라고도 하며 Java 바이트 코드를 런타임에 기계어로 번역하는 컴파일 기법이다. 
+- 인터프리터와 컴파일의 짬뽕이라고 이해하면 쉽다
+- JRE에 속한다.
+
+### JIT 동작 방법
+![JIT 동작 방법](./resources/JIT.png "Title")
+
 ## JVM 구성 요소
 ## JDK와 JRE의 차이
 
-
-
+### 출처
+- https://ko.wikipedia.org/wiki/JIT_%EC%BB%B4%ED%8C%8C%EC%9D%BC
