@@ -73,7 +73,7 @@
 암시적은 타입 변환을 하는 것
 ``` java
     int a = 100;
-    float b= a;
+    float b = a;
     System.out.println(a);
     System.out.println(b); 
 ```
