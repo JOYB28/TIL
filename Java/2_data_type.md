@@ -40,7 +40,7 @@
     double d1 = 123.4;
     double d2 = 1.234e2; // d1과 동일
     // float type floating-point 리터럴
-    float f1 = 123.4f;
+    float f1 = 123.4f;\
     String s = "joyb"
 ```
 
@@ -56,14 +56,42 @@
 ```
 
 ## 변수의 스코프와 라이프타임
-
+스코프는 변수에 대한 접근 범위를 나타낸다.
+- Local variables (지역 변수): 메소드(혹은 생성자, 초기화 블럭 안) 안에서 선언되어 메소드 안에서만 접근 가능하다. 메소드가 종료되면 라이프타임이 종료된다.
+- Instance variables (인스턴스 변수): 클래스 안에서 선언되어 인스턴스가 생성될 때 함께 생성된다. 인스턴스마다 다른 값을 가진다.
+- Class/static variables (클래스 변수): 클래스 안에서 선언되며 클래스가 처음 메모리에 로딩될 때 생성된다.
 
 ## 타입 변환, 캐스팅 그리고 타입 프로모션
+타입변환은 변수 또는 리터럴의 타입을 다른 타입으로 변환하는 것
+### 타입 캐스팅
+``` java
+    int a = 100;
+    float b = (float) a;
+```
+### 타입 프로모션
+크기가 더 작은 타입을 더 큰 타입에 대입할 때 자동으로(암시적으로) 타입이 변환되는 현상
+암시적은 타입 변환을 하는 것
+``` java
+    int a = 100;
+    float b= a;
+    System.out.println(a);
+    System.out.println(b); 
+```
+``` 
+100
+100.0
+```
 
 ## 1차 및 2차 배열 선언하기
+``` java
+    int arr[] = new int[10]; // 10
+    int arr2[][] = new int[10][10]; // 10*10
+```
 
 ## 타입 추론, var
+WIP
 
 ### 참고
 - https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 - https://gbsb.tistory.com/6
+- https://www.geeksforgeeks.org/variable-scope-in-java/
